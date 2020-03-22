@@ -1,0 +1,39 @@
+
+<div>
+  Při zvolení této volby může být v projektu prováděno více sestavení souběžně.
+  <p>
+  Standardní postup je zpracovávat v projektu pouze jedno sestavení najednou &mdash;
+  všechny ostatní žádosti o spuštění sestavení projektu zůstanou ve frontě,
+  dokud první nebude dokončeno.<br>
+  Důvodem je bezpečnost, protože projekty mohou často vyžadovat výhradní přístup
+  k určitým zdrojům, jako například databáze, nebo hardware.
+  <p>
+  Ale při povolení této volby budou prováděno několik sestavení současně, pokud
+  je k dispozici dostatek zdrojů, které tento projekt dokáží obsloužit.
+  Pokud kdykoliv nastane chvíle, kdy nebude dostatek prostředků, budou všechny
+  další žádosti o sestavení umístěny do fronty, tak jako při výchozím nastavení.
+  <p>
+  Povolení souběžných sestavení se hodí u projektů, které mají zdlouhavou sadu
+  testů, jelikož každé sestavení může obsahovat menší počet změn a tím se celkový
+  čas zmenší, protože následná sestavení nemusí čekat na dokončení zkušební
+  sady.<br>
+  Tato funkce je také vhodný pro projekty s parametry, jejichž jednotlivá sestavení
+  &mdash; v závislosti na použitých parametrů &mdash; mohou být na sobě navzájem 
+  nezávislá.
+  <p>
+  Každé sestavení je prováděno ve vlastním pracovním prostoru, odděleném od
+  ostatních. Jenkins standardně připojuje "<tt>@&lt;číslo&gt;</tt>" k názvu
+  adresáře pracovního prostoru, např. "<tt>@2</tt>".<br>
+  Oddělovač "<tt>@</tt>" můžete změnit úpravou systémové vlastnosti Java
+  <tt>hudson.slaves.WorkspaceList</tt> při spouštění Jenkins.
+  Například, "<tt>hudson.slaves.WorkspaceList=-</tt>" vy oddělovač
+  změnilo na pomlčku.<br>
+  Pro další informace o nastavování systémových vlastnosti si přečtěte <a
+  href="https://jenkins.io/redirect/setting-system-properties"
+  target="_blank">stránku wiki</a>.
+  <p>
+  Pokud ale pobolíte možnost <i>Použít vlastní pracovní prostory</i>, budou
+  všechna sestavení zpracovávána ve stejném prostoru. V tomto případě je 
+  opatrnost na místě, protože mnoho sestavení může upravovat stejný adresář
+  najednou.
+</div>

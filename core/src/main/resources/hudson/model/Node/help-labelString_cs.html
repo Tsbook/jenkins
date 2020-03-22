@@ -1,0 +1,21 @@
+<div>
+  Štítky (nebo značky) se používají pro přiřazení mnoha agentů do jedné logické skupiny.
+  <p>
+  Například, máte-li mnoho strojů s Windows a úlohu, která na tomto systému musí
+  běžet, pak můžete jim všem přidat štítek <tt>windows</tt> a pak svázat úlohu s
+  tímto štítkem.
+  <br>
+  Tímto zajistíte, že vaše úloha poběží na agentech s Windows a vyloučíte ty,
+  co jej nemají.
+  <p>
+  Štítky nemusí nezbytně označovat operační systém agenta; můžete je také použít
+  pro označení architektury procesoru, případně že má k dispozici určitý nástroj.
+  <p>
+  Při zadávání více štítků najednou je třeba oddělit mezerou. Například,
+  <tt>windows docker</tt> přidělí agentovi dva štítky: <tt>windows</tt>
+  a <tt>docker</tt>.
+  <p>
+  Śtítky mohou obsahovat všechny znaky, kromě mezer, ale některých byste se měli
+  vyvarovat, jako například těchto: <tt>!&amp;|&lt;&gt;()</tt>, protože jiné funkce
+  Jenkins umožňují štítky určovat pomocí výrazů, kde mohou být tyto znaky použity.
+</div>

@@ -1,0 +1,14 @@
+<div>
+  Pokud je váš server Jenkins umístěn za firewallem a nemá přímý přístup k internetové síti,
+  a pokud je váš server JVM špatně nastaven
+  (<a  href="http://download.oracle.com/javase/7/docs/technotes/guides/net/properties.html">Pro další informace si přečtěte vlastnosti JDK měnící síťová připojení</a>)
+  a nemá povoleno připojení k internetu, můžete v tomto poli zadat název HTTP proxy serveru, aby Jenkins mohl
+  instalovat zásuvné moduly vaším prostřednictvím. Nezapomeňte, že při komunikaci s aktualizačním centrem pro stažení modulů využívá Jenkins protokol HTTPS.
+
+  <p>
+  Pokud toto pole ponecháte prázdné
+  bude se Jenkins pokoušet připojit k internetu přímo.
+
+  <p>
+  Pokud nevíte, jakou hodnotu zde zadat, zkontrolujte nastavení proxy vašeho prohlížeče.
+</div>

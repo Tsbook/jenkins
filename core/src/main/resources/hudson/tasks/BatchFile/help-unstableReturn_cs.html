@@ -1,0 +1,9 @@
+<div>
+    Pokud je nastaveno, určuje hodnotu kódu ukončení dávkového souboru, která bude vyhodnocena jako nestabilní výsledek sestavení.
+    Pokud kód ukončení odpovídá této hodnotě, budou výsledky sestavení označeny jako nestabilní
+    a provedou se další kroky. Podporované hodnoty odpovídají nejširšímu rozsahu kódů ukončení v
+    systémech WIndows a jim podobných. Ve Windows NT4 a novější jsou kódy ukládány jako čtyřbytové celé číslo se znaménkem,
+    a tím je rozsah hodnot určen intervalem od 2147483647 do -2147483648. Starší verze
+    Windows používají 2 bajty. DOS a jemu podobné systémy používají jeden bajt, a tím je rozsah omezen na 0-255.
+    Hodnota 0 se ignoruje a sestavení ukončené touto hodnotou nebude označeno jako nestabilní, aby se zajistilo shodného výchozího chování.
+</div>

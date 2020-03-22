@@ -1,0 +1,16 @@
+<div>
+  Maximální počet sestavení, které Jenkins může na tomto agentovi provádět najednou.
+  <p>
+  Dobrá počáteční hodnota je množství jader procesoru ve stroji. Nastavením vyšší
+  hodnoty každé sestavení zpomalí, ale celkový výkon agenta může stoupnout.
+  Například, jedno sestavení může zatěžovat procesor, zatímco jiné, běžící
+  současně, může využívat vstupy/výstupy &mdash; a tím druhé sestavení
+  může využít volné prostředky, které v tu chvíli nejsou používány.
+  <p>
+  Agenti musí mít alespoň jednoho volného vykonavatele. Pro dočasné zastavení
+  zpracování sestavení na agentovi použijte tlačítko
+  <i>Označit tento uzel jako dočasně nedostupný</i> na stránce agenta.
+  <p>
+  Toto se netýká hlavního serveru Jenkins &mdash; nastavením počtu vykonavatelů
+  zde na nulu zabráníte v provádění všech sestavení na serveru.
+</div>

@@ -1,0 +1,33 @@
+<div>
+  <p>
+  Agent potřebuje mít svůj vlastní adresář vyhrazený pro Jenkins. Zadejte
+  na agentovi cestu k tomuto adresáři. Nejlepší je použít absolutní cestu,
+  tedy <tt>/var/jenkins</tt> nebo <tt>c:\jenkins</tt>.
+  Tato cesta by měla existovat na stroji agenta. Není třeba, aby byla
+  nadřazenému serveru přístupná.
+  <p>
+  Agenti důležitá data neuchovávají; všechna nastavení úloh, záznamy sestavení
+  a artefakty jsou uloženy na hlavním serveru, proto je možné použít dočasný
+  adresář jako kořen agenta.
+  <br>
+  Pokud ale agentovi přidělíte adresář, který není mazán, například po restartu
+  stroje, pak bude uchovávat například instalace nástrojů, nebo pracovní prostory
+  sestavení. Tím se zamezí zbytečnému stahování balíčků, nebo zdrojového kódu
+  při znovuzahájení zpracování sestavení na tomto agentovi po jeho restartu.
+  <p>
+  Při použití relativní cesty, jako třeba <tt>./jenkins-agent</tt>, bude cesta
+  relativní k pracovnímu adresáři zadaného <i>metodou spuštění</i>.
+  <ul>
+  <li>U spouštěčů, kde Jenkins spravuje spouštění agenta, jako např. u SSH,
+  se většinou současný pracovní adresář nemění, např. domovský adresář
+  uživatele.</li>
+  <li>U spouštěčů, kde Jenkins nemá kontrolu nad zavedením procesu agenta,
+  tak, jak je tomu v případě JNLP spuštěného z buď příkazového řádku, nebo přes
+  internetový odkaz v prohlížeči, se může současný pracovní adresář měnit v rámci
+  jednotlivých spuštění a použití těchto typů cest může vést k problémům.
+  <br>
+  Hlavním problémem vyskytujícím se při použití relativních cest u spouštěčů, jako
+  je JNLP, je růst počtu zastaralých pracovních prostorů a instalací nástrojů na
+  stroji agenta. Díky tomu může velmi rychle dojít k zaplnění disku.</li>
+  </ul>
+</div>

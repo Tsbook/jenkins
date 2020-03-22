@@ -1,0 +1,34 @@
+<div>
+  Parametry vám umožňují vznést u uživatelů žádost o zadání jednoho nebo více vstupů,
+  které budou během sestavení předány. Například, budete mít projekt, který spouští
+  testy na vyžádání, kde uživatelé nahrávají archiv se soubory k otestování.
+  To lze docílit použitím <i>Parametru pro soubor</i>.
+  <br>
+  Nebo třeba budete mít projekt, v jehož rámci je vydáván software, a vy chcete, aby
+  uživatelé zadali poznámky k vydání, které budou nahrány spolu se software. To zajistíte
+  přidáním <i>Víceřádkového řetězcového parametru</i>.
+  <p>
+  Každý parametr se skládá z <i>Názvu</i> a nějaké <i>Hodnoty</i>, v závislosti
+  na typu parametru. Tyto páry název-hodnota budou při spuštění sestavení předány jako
+  proměnné prostředí a tím i následující fáze sestavení (jako např. kroky při zpracování)
+  budou moci hodnoty načíst, např. pomocí syntaxe <tt>${PARAMETER_NAME}</tt> (nebo
+  <tt>%PARAMETER_NAME%</tt> na Windows).
+  <br>
+  To také znamená, že každý parametr zde nastavený by měl mít jedinečný
+  <i>Název</i>.
+  <p>
+  Když projekt používá parametry, standardní odkaz <i>Sestavit nyní</i> bude
+  nahrazen odkazem <i>Sestavit pomocí parametrů</i>, kde budou uživatelé požádání
+  o zadání hodnot u každého nastaveného parametru.  Pokud nic nezadají, sestavení
+  použije výchozí hodnoty pro každý z nich.
+  <p>
+  Pokud je sestavení spuštěno automaticky, například pomocí spouštěče z úložiště
+  zdrojového kódu, budou u parametrů použity jejich výchozí hodnoty.
+  <p>
+  Pokud je takovéto sestavení umístěno do fronty, spuštění dalšího sestavení stejného
+  projektu bude přijato, pouze pokud jsou hodnoty parametrů odlišné, nebo pokud
+  je povolena volba <i>Spouštět sestavení souběžně dle potřeby</i>.
+  <p>
+  Pro další informace si přečtěte <a href="https://jenkins.io/redirect/parameterized-builds"
+  target="_blank">dokumentaci sestavení s parametry</a>.
+</div>

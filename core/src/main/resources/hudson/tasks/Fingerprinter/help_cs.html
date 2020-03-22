@@ -1,0 +1,30 @@
+<div>
+  Jenkins může zapsat 'otisk' souborů (nejčastěji u souborů jar), aby bylo možné zjistit
+  kde/kdy byly tyto soubory vytvořeny a použity. Když máte v Jenkins na sobě vzájemně
+  závislé projekty, můžete díky otiskům rychle najít odpovědi na otázky jako například:
+
+  <ul>
+    <li>
+      Na disku mám soubor <tt>ABC.jar</tt>, ale z kterého sestavení čísla sestavení ABC pochází?
+    </li>
+    <li>
+      Můj projekt CDE závisí na souboru <tt>abc.jar</tt> z projektu ABC.
+    </li>
+    <li><ul>
+      <li>
+        Které sestavení <tt>abc.jar</tt> je v CDE #51 použito?
+      </li>
+      <li>
+        Které sestavení projektu BCE obsahuje moji opravu chyby v souboru <tt>abc.jar</tt> #32?
+      </li>
+    </ul></li>
+  </ul>
+
+  <p>
+  Pro použití této funkce musí všechny projekty zaznamenávat otisky, nejenom projekt, v kterém
+  je soubor vytvořen, ale také ty, v kterých je použit.
+
+  <p>
+  Pro další informace si přečtěte
+  <a href="https://jenkins.io/redirect/fingerprint">tento dokument</a>
+</div>
